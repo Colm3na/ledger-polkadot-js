@@ -40,6 +40,7 @@ import TransportWebUSB from "@ledgerhq/hw-transport-webusb";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import TransportU2F from "@ledgerhq/hw-transport-u2f";
 import LedgerApp from "../../src";
+import { ERROR_CODE } from "../../src/common";
 
 const txBlobStr =
   "0400ff8d16d62802ca55326ec52bf76a8543b90e2aba5bcf6cd195c0d6fc1ef38fa1b333158139ae28a3df" +
@@ -127,7 +128,6 @@ export default {
       this.log("Response received!");
       this.log(response);
     },
-  },
     async getAddress() {
       this.deviceLog = [];
 
